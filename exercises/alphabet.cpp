@@ -5,10 +5,28 @@
 
 #include <iostream>
 
-int main() {
+int main()
+{
 
+    auto alphabet = [currentLetter = 'a']() mutable {
+        const char lowerEnd = 'z';
+        const char upperEnd = 'Z';
+        char result { currentLetter };
+        if (currentLetter == lowerEnd) {
+            currentLetter = 'A';
+        }
+        else if (currentLetter == upperEnd) {
+            currentLetter = 'a';
+        }
+        else {
+            ++currentLetter;
+        }
+
+        return result;
+    };
     for (int i = 0; i < 100; ++i) {
-        // std::cout << alphabet();
+        std::cout << alphabet() << std::endl;
+        ;
     }
     std::cout << '\n';
     return 0;

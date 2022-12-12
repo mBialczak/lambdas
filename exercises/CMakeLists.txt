@@ -25,5 +25,5 @@ foreach(FILE ${SOURCES})
     target_compile_options(${BINNAME} PRIVATE -Wall -Wextra -pedantic -pedantic-errors)
 endforeach(FILE)
 
-include(GoogleTest)
-gtest_discover_tests(${PROJECT_NAME}-ut)
+# include(GoogleTest)
+# gtest_discover_tests(${PROJECT_NAME}-ut)
