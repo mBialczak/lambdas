@@ -6,7 +6,7 @@
 #include <thread>
 #include <utility>
 
-template <typename Action, typename... Args>
+template <typename Action, typename ...Args>
 void schedule(Action func,
               std::chrono::seconds time,
               Args... args) {
